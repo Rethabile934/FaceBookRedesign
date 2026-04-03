@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
 
   return (
     <View style={styles.card}>
-      {/* Header */}
+      
       <View style={styles.header}>
         <Image source={{ uri: post.avatar }} style={styles.avatar} />
         <View style={styles.userInfo}>
@@ -28,10 +28,10 @@ const PostCard = ({ post }) => {
         </TouchableOpacity>
       </View>
 
-      {/* Content */}
+     
       <Text style={styles.content}>{post.content}</Text>
       
-      {/* Post Image - handles both local and remote images */}
+      
       {post.image && (
         <TouchableOpacity activeOpacity={0.9}>
           <Image 
@@ -41,7 +41,7 @@ const PostCard = ({ post }) => {
         </TouchableOpacity>
       )}
 
-      {/* Stats */}
+   
       <View style={styles.stats}>
         <View style={styles.statsLeft}>
           <Text style={styles.heartIcon}>❤️</Text>
@@ -50,7 +50,7 @@ const PostCard = ({ post }) => {
         <Text style={styles.statsText}>{post.comments} comments</Text>
       </View>
 
-      {/* Actions */}
+    
       <View style={styles.actions}>
         <TouchableOpacity 
           onPress={likePost} 
